@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+	"subid": 11,
+    "name": "hotelone",
+    "starRating": 5,
+    "facilities": ["car park", "pool"]
+  },
+  {
+    "id": 2,
+	"subid": 888,
+    "name": "hoteltwo",
+    "starRating": 3,
+    "facilities": ["car park", "gym"]
+  },
+  {
+	"id": 3,
+	"subid": 33,
+    "name": "hotelthree",
+    "starRating": 3,
+    "facilities": []
+  }
+]
