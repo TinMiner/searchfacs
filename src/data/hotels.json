@@ -19,5 +19,19 @@
     "name": "hotelthree",
     "starRating": 3,
     "facilities": []
+  },
+  {
+    "id": 4,
+	"subid": 999,
+    "name": "Hotel California",
+    "starRating": 1,
+    "facilities": ["jacuzzi", "bar", "scrabble", "snooker", "guitar lessons"]
+  },
+  {
+    "id": 5,
+	"subid": 99,
+    "name": "Hotel Latas",
+    "starRating": 1,
+    "facilities": ["bar", "putting green", "day excursions"]
   }
 ]

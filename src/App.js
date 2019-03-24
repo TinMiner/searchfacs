@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './App.css';
 import Hotels from './data/hotels.json';
 
-class App extends Component {
+class App extends PureComponent {
   constructor() {
     super();
     this.state = {
       hotelResults : [],
-      searchStr : 'pool',
+      searchStr : 'autofills - backspace and press enter to clear',
     };
 
 
@@ -18,8 +18,8 @@ class App extends Component {
   handleSearch(event) {
 
     this.setState({ searchStr: event.target.value });
-    this.state.hotelResults = [];
-	//this.setState({ hotelResults: [] });
+   // this.state.hotelResults = [];
+	//this.setState({ ...this.state.hotelResults });
 
     //add locations to search results
     if( this.state.searchStr.length > 1){
@@ -38,18 +38,33 @@ class App extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
+	return this.setState({ hotelResults: [] });
   }
   
   render() {
     return (
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: "center", backgroundColor: "#00ff00" }}>
         
         <form onSubmit={this.handleSubmit}>
-          Search:
-          <input type="text" value={this.state.searchStr} onChange={this.handleSearch} />
+          Search Facilities :&nbsp;
+          <input 
+			type="text" 
+			value={this.state.searchStr} 
+			onChange={this.handleSearch} 
+			autoFocus 
+            size= "50"
+		  />
         </form>
 
-        <div style={{ display: "inline-block", width: 200, position: "absolute", marginLeft: -100, backgroundColor: "yellow"}}>
+        <div style={{ 
+			display: "inline-block", 
+			width: 300,
+			position: "absolute", 
+			marginLeft: -100,
+			paddingLeft: 2,
+			backgroundColor: "#3b77d6"
+			}}
+		>
         {
           //based upon search result locations display the facilities at the hotel
 		
